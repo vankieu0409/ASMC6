@@ -179,9 +179,9 @@ namespace ASMC6.Server.Infrastructures.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { new Guid("8d4b836e-d9fa-4fa9-88c0-9a875d2b7d5c"), "4f065557-bd70-4740-9777-be03ba6729fc", "Employee", "Employee" },
-                    { new Guid("ab251560-a455-40fd-adfd-54f9e150f874"), "631bbc6c-9a13-46e3-92f9-975365dd2e7d", "Administrator", "Administrator" },
-                    { new Guid("f91ec0e5-d768-42e2-8926-de7d3162430f"), "5971c719-7851-4fd1-ae32-d8a29826af5c", "Customer", "Customer" }
+                    { new Guid("8d4b836e-d9fa-4fa9-88c0-9a875d2b7d5c"), "a7127434-9331-41fc-8042-72b444fb83f4", "Employee", "Employee" },
+                    { new Guid("ab251560-a455-40fd-adfd-54f9e150f874"), "b5f2dfde-a610-436e-bd8c-923f903284a6", "Administrator", "Administrator" },
+                    { new Guid("f91ec0e5-d768-42e2-8926-de7d3162430f"), "6f5bda9a-85e0-4a82-afd5-bf5be6ad0ab1", "Customer", "Customer" }
                 });
 
             migrationBuilder.InsertData(
@@ -189,8 +189,8 @@ namespace ASMC6.Server.Infrastructures.Migrations
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Decriptions", "DisplayName", "Email", "EmailConfirmed", "Image", "IsDeleted", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
                 values: new object[,]
                 {
-                    { new Guid("6aa93c41-f21f-44e3-8f46-7d76b03574c5"), 0, "66b0d42c-7b4a-4974-aac5-747f5ba64914", " Chị rất nóng tính", "Chị Nhà Cục Súc", "kieunvph14806@fpt.edu.vn", true, "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2022/8/18/1082204/Leesuk.jpg", false, false, new DateTimeOffset(new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)), "kieunvph14806@fpt.edu.vn", "kieunvph14806@fpt.edu.vn", null, "", false, "3d99f1ae-f55a-44a7-b84b-094ddbacc636", false, "kieunvph14806@fpt.edu.vn" },
-                    { new Guid("fb1eab16-920e-4480-b3ee-01f6e9c15ab5"), 0, "5ea313ba-81f6-4453-841e-9fd208f3c29c", "", "Bậu", "vankieu0409@gmail.com", true, "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2022/8/18/1082204/Leesuk.jpg", false, false, new DateTimeOffset(new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)), "vankieu0409@gmail.com", "vankieiu0409@gmail.com", null, "", false, "420e7f15-f0fe-4555-864a-f218e4b5a784", false, "vankieu0409@gmail.com" }
+                    { new Guid("6aa93c41-f21f-44e3-8f46-7d76b03574c5"), 0, "62c44f51-c904-4c05-a209-140a0fd09358", " Chị rất nóng tính", "Chị Nhà Cục Súc", "kieunvph14806@fpt.edu.vn", true, "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2022/8/18/1082204/Leesuk.jpg", false, false, new DateTimeOffset(new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)), "kieunvph14806@fpt.edu.vn", "kieunvph14806@fpt.edu.vn", "AQAAAAEAACcQAAAAEMfrd51YGMSLzKs7NWUztJV/CKxRqpABxKVBI7+iwpeD82bZA8aBCnr7kKusapiDQw==", "", false, "1b39c3f6-060b-46d6-b3c0-780c36082850", false, "kieunvph14806@fpt.edu.vn" },
+                    { new Guid("fb1eab16-920e-4480-b3ee-01f6e9c15ab5"), 0, "61dd46ba-0704-4a4f-be62-50ada189d4bb", "", "Bậu", "vankieu0409@gmail.com", true, "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2022/8/18/1082204/Leesuk.jpg", false, false, new DateTimeOffset(new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)), "vankieu0409@gmail.com", "vankieu0409@gmail.com", "AQAAAAEAACcQAAAAEMfrd51YGMSLzKs7NWUztJV/CKxRqpABxKVBI7+iwpeD82bZA8aBCnr7kKusapiDQw==", "", false, "4e5490b3-91fa-48db-915e-e51ba40e7d76", false, "vankieu0409@gmail.com" }
                 });
 
             migrationBuilder.InsertData(

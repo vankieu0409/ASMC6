@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ASMC6.Server.Infrastructures.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230313194036_kieu")]
+    [Migration("20230313211916_kieu")]
     partial class kieu
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -82,21 +82,21 @@ namespace ASMC6.Server.Infrastructures.Migrations
                         new
                         {
                             Id = new Guid("ab251560-a455-40fd-adfd-54f9e150f874"),
-                            ConcurrencyStamp = "631bbc6c-9a13-46e3-92f9-975365dd2e7d",
+                            ConcurrencyStamp = "b5f2dfde-a610-436e-bd8c-923f903284a6",
                             Name = "Administrator",
                             NormalizedName = "Administrator"
                         },
                         new
                         {
                             Id = new Guid("8d4b836e-d9fa-4fa9-88c0-9a875d2b7d5c"),
-                            ConcurrencyStamp = "4f065557-bd70-4740-9777-be03ba6729fc",
+                            ConcurrencyStamp = "a7127434-9331-41fc-8042-72b444fb83f4",
                             Name = "Employee",
                             NormalizedName = "Employee"
                         },
                         new
                         {
                             Id = new Guid("f91ec0e5-d768-42e2-8926-de7d3162430f"),
-                            ConcurrencyStamp = "5971c719-7851-4fd1-ae32-d8a29826af5c",
+                            ConcurrencyStamp = "6f5bda9a-85e0-4a82-afd5-bf5be6ad0ab1",
                             Name = "Customer",
                             NormalizedName = "Customer"
                         });
@@ -187,7 +187,7 @@ namespace ASMC6.Server.Infrastructures.Migrations
                         {
                             Id = new Guid("fb1eab16-920e-4480-b3ee-01f6e9c15ab5"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "5ea313ba-81f6-4453-841e-9fd208f3c29c",
+                            ConcurrencyStamp = "61dd46ba-0704-4a4f-be62-50ada189d4bb",
                             Decriptions = "",
                             DisplayName = "Bậu",
                             Email = "vankieu0409@gmail.com",
@@ -197,10 +197,11 @@ namespace ASMC6.Server.Infrastructures.Migrations
                             LockoutEnabled = false,
                             LockoutEnd = new DateTimeOffset(new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             NormalizedEmail = "vankieu0409@gmail.com",
-                            NormalizedUserName = "vankieiu0409@gmail.com",
+                            NormalizedUserName = "vankieu0409@gmail.com",
+                            PasswordHash = "AQAAAAEAACcQAAAAEMfrd51YGMSLzKs7NWUztJV/CKxRqpABxKVBI7+iwpeD82bZA8aBCnr7kKusapiDQw==",
                             PhoneNumber = "",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "420e7f15-f0fe-4555-864a-f218e4b5a784",
+                            SecurityStamp = "4e5490b3-91fa-48db-915e-e51ba40e7d76",
                             TwoFactorEnabled = false,
                             UserName = "vankieu0409@gmail.com"
                         },
@@ -208,7 +209,7 @@ namespace ASMC6.Server.Infrastructures.Migrations
                         {
                             Id = new Guid("6aa93c41-f21f-44e3-8f46-7d76b03574c5"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "66b0d42c-7b4a-4974-aac5-747f5ba64914",
+                            ConcurrencyStamp = "62c44f51-c904-4c05-a209-140a0fd09358",
                             Decriptions = " Chị rất nóng tính",
                             DisplayName = "Chị Nhà Cục Súc",
                             Email = "kieunvph14806@fpt.edu.vn",
@@ -219,9 +220,10 @@ namespace ASMC6.Server.Infrastructures.Migrations
                             LockoutEnd = new DateTimeOffset(new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             NormalizedEmail = "kieunvph14806@fpt.edu.vn",
                             NormalizedUserName = "kieunvph14806@fpt.edu.vn",
+                            PasswordHash = "AQAAAAEAACcQAAAAEMfrd51YGMSLzKs7NWUztJV/CKxRqpABxKVBI7+iwpeD82bZA8aBCnr7kKusapiDQw==",
                             PhoneNumber = "",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "3d99f1ae-f55a-44a7-b84b-094ddbacc636",
+                            SecurityStamp = "1b39c3f6-060b-46d6-b3c0-780c36082850",
                             TwoFactorEnabled = false,
                             UserName = "kieunvph14806@fpt.edu.vn"
                         });

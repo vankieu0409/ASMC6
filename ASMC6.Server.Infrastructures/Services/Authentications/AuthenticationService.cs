@@ -226,6 +226,7 @@ public class AuthenticationService : IAuthenticationService
         };
         _httpContextAccessor?.HttpContext?.Response
             .Cookies.Append("refreshToken", refreshToken.Token, cookieOptions);
+        Console.WriteLine(refreshToken);
 
         _refreshTokenRepository.AddAsync(refreshTokenEntity);
         _refreshTokenRepository.SaveChangesAsync();
