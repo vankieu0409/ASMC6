@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace ASMC6.Shared.Entities;
 
-public class Users : IdentityUser<Guid>, IEntity
+public class UserEntity : IdentityUser<Guid>, IEntity
 {
     public bool IsDeleted { get; set; }
     public string DisplayName { get; set; }
