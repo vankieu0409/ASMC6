@@ -19,7 +19,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ASMC6.Server.Infrastructures\ASMC6.Server.Infrastructures.csproj" />
-    <ProjectReference Include="..\ASMC6.Shared\ASMC6.Shared.csproj" />
   </ItemGroup>
 
 </Project>
