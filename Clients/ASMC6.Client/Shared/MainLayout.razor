@@ -1,0 +1,94 @@
+﻿@using MudBlazor.Utilities
+@inherits LayoutComponentBase
+@using ASMC6.Client.Pages
+@using ASMC6.Shared.Dtos
+@using Microsoft.AspNetCore.Components.Authorization
+
+<MudThemeProvider @ref="@_mudThemeProvider" @bind-IsDarkMode="@_isDarkMode" />
+<MudDialogProvider />
+<MudSnackbarProvider />
+<MudLayout>
+
+    <MudAppBar Elevation="3" Color="Color.Primary">
+
+        <AuthorizeView>
+            <Authorized>
+                <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
+                <MudSpacer />
+                <MudExpansionPanels>
+                    <MudMenu>
+                        <ActivatorContent>
+                            <MudAvatar Color="Color.Warning" Image="@userDto.Image" />
+                        </ActivatorContent>
+                        <ChildContent>
+                            <MudMenuItem Href="/user{Id}">Profile</MudMenuItem>
+                            <MudMenuItem>Usage</MudMenuItem>
+                            <MudMenuItem OnClick="BeginSignOut">Sign Out</MudMenuItem>
+                        </ChildContent>
+                    </MudMenu>
+                </MudExpansionPanels>
+            </Authorized>
+            <NotAuthorized>
+                <MudSpacer />
+                <MudIconButton Icon="@Icons.Material.Filled.Login" OnClick="Login" Edge="Edge.End">Login</MudIconButton>
+            </NotAuthorized>
+        </AuthorizeView>
+        <MudToggleIconButton Toggled="@_isDarkMode" ToggledChanged="OnToggledChanged"
+                             Icon="@Icons.Material.Filled.LightMode" Color="@Color.Inherit" Title="Default"
+                             ToggledIcon="@Icons.Material.Filled.DarkMode" ToggledColor="@Color.Dark" ToggledTitle="Dark" Edge="Edge.End" />
+    </MudAppBar>
+
+    <MudDrawer @bind-Open="_drawerOpen" ClipMode="DrawerClipMode.Never" Breakpoint="Breakpoint.Sm" Elevation="1" Variant="@DrawerVariant.Mini" DisableOverlay="!userDto.Success" OpenMiniOnHover="false" >
+       <AuthorizeView>
+        <Authorized>
+        <NavMenu/>
+        </Authorized>
+        </AuthorizeView>
+    </MudDrawer>
+    
+    <MudMainContent>
+        @Body
+    </MudMainContent>
+</MudLayout>
+@code {
+    UserDto userDto = new UserDto();
+    
+    bool _drawerOpen = false;
+    private bool _isDarkMode = false;
+    private MudThemeProvider _mudThemeProvider;
+
+    public void OnToggledChanged(bool toggled)
+    {
+        // Because variable is not two-way bound, we need to update it ourself
+        _isDarkMode = toggled;
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        userDto = await _localStorage.GetItemAsync<UserDto>("user");
+        if (firstRender)
+        {
+            _isDarkMode = await _mudThemeProvider.GetSystemPreference();
+            StateHasChanged();
+        }
+    }
+
+
+    void DrawerToggle()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
+
+    private async Task BeginSignOut(MouseEventArgs args)
+    {
+        var checkLogout = await _authentication.LogoutService();
+        if (checkLogout) _navigationManager.NavigateTo("/", true);
+        else await _jsRuntime.InvokeVoidAsync("alert", "Đăng không xuất thành công!");
+
+    }
+
+    void Login()
+    {
+        _navigationManager.NavigateTo("/login");
+    }
+}

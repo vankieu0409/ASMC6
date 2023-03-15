@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASMC6.Shared", "ASMC6.Share
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{69007B59-D4A0-452C-9B89-72DCDAD75AF4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASMC6.Client", "..\C6\ASMC6.Client\ASMC6.Client.csproj", "{02663867-5A0D-4BFC-9435-B55CA927CE43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASMC6.Client", "Clients\ASMC6.Client\ASMC6.Client.csproj", "{02663867-5A0D-4BFC-9435-B55CA927CE43}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASMC6.Client.Infrastructure", "Clients\ASMC6.Client.Infrastructure\ASMC6.Client.Infrastructure.csproj", "{0250DC64-F5C8-41DB-8352-593418F1B22D}"
 EndProject
